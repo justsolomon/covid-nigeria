@@ -32,7 +32,6 @@ export const fetchCovidData = (values) => {
 
     Axios.get('https://covidnigeria.herokuapp.com/api', values)
       .then((res) => {
-        console.log(res);
         dispatch(fetchDataSuccess(res.data.data));
 
         //update current statistics
@@ -53,7 +52,6 @@ export const fetchCovidData = (values) => {
         );
       })
       .catch((err) => {
-        console.log(err);
         dispatch(fetchDataFailure(err.message));
       });
   };
