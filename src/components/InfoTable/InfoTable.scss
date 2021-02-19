@@ -1,0 +1,30 @@
+.info-table {
+  @media (min-width: 950px) {
+    &__head,
+    &__body,
+    tr,
+    td,
+    th {
+      display: block;
+    }
+
+    &__body {
+      height: 500px;
+      overflow-y: auto;
+      width: 100%;
+      overflow: overlay;
+    }
+
+    &__body td,
+    &__body th,
+    &__head > tr > th {
+      float: left;
+      position: relative;
+      &::after {
+        content: '';
+        clear: both;
+        display: block;
+      }
+    }
+  }
+}
