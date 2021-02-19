@@ -20,7 +20,11 @@ function SearchBar() {
   };
 
   return (
-    <form className='my-lg-0 search-form' autoComplete='off'>
+    <form
+      className='my-lg-0 search-form'
+      autoComplete='off'
+      onSubmit={(e) => e.preventDefault()}
+    >
       <div className='d-flex flex-column search-form__inner'>
         <div className='input-group'>
           <div className='input-group-prepend'>

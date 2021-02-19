@@ -52,6 +52,7 @@ export const fetchCovidData = (values) => {
         );
       })
       .catch((err) => {
+        console.log(err);
         dispatch(fetchDataFailure(err.message));
       });
   };

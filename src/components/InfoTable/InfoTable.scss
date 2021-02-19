@@ -1,5 +1,11 @@
 .info-table {
   @media (min-width: 950px) {
+    @-moz-document url-prefix() {
+      &__head {
+        overflow-y: scroll;
+      }
+    }
+
     &__head,
     &__body,
     tr,

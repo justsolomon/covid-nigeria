@@ -5,12 +5,12 @@ import './InfoTable.scss';
 import Loader from '../Loader/Loader';
 
 function InfoTable() {
-  const states = useSelector((state) => state.covidData.data.states);
+  const { data, loading } = useSelector((state) => state.covidData);
 
   return (
     <div className='state-cases'>
       <p className='section-header'>Confirmed Cases by State</p>
-      {states.length ? (
+      {!loading ? (
         <div className='info-table mb-4 table-responsive'>
           <table className='table table-bordered table-fixed table-hover h-25'>
             <thead className='info-table__head'>
@@ -32,7 +32,7 @@ function InfoTable() {
                 </th>
               </tr>
             </thead>
-            <TableBody states={states} />
+            <TableBody states={data.states} />
           </table>
         </div>
       ) : (

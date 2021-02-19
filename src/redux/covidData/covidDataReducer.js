@@ -16,6 +16,7 @@ const covidDataReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: true,
+        error: '',
       };
     case FETCH_DATA_SUCCESS:
       return {

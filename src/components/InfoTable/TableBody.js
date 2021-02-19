@@ -4,9 +4,9 @@ import TableRow from './TableRow';
 function TableBody({ states }) {
   return (
     <tbody className='info-table__body custom-scrollbar'>
-      {states.map((state) => {
-        return <TableRow stateData={state} key={state.id} />;
-      })}
+      {states.map((state) => (
+        <TableRow stateData={state} key={state._id} />
+      ))}
     </tbody>
   );
 }
